@@ -9,8 +9,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
 
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
-  <link rel="stylesheet" href="reset.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./src/CSS/reset.css">
+  <link rel="stylesheet" href="./src/CSS/style.css">
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -63,11 +63,16 @@
           <div class="card">
             <div class="left">
               <div class="title">
-                <h1>Make <span style="display: block;"></span> remote work</h1>
+                <h1>Make remote work</h1>
               </div>
               <div class="content">
-                Get your team in sync, no matter your location. Streamline processes,
-                create team rituals, and watch productivity soar.
+                <blockquote class="content">
+                  <p>Get your team in sync, no matter your location. Streamline processes,
+                create team rituals, and watch productivity soar.</p>
+                <footer>
+                  <cite></cite>
+                </footer>
+                </blockquote>
               </div>
               <div class="card-btn">
                 <button>Learn More</button>
@@ -81,7 +86,7 @@
             </div>
             <div class="right">
               <picture class="right-img">
-                <source media="(750px)" srcset="./images/-hero-mobile.png" alt="">
+                <source media="(max-width:1024px)" srcset="./images/image-hero-mobile.png" alt="">
                 <img src="./images/image-hero-desktop.png" alt="">
               </picture>
             </div>
@@ -110,7 +115,7 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
     </div> -->
-  <script src="javascript.js"></script>
+  <script src="./src/JS/javascript.js"></script>
 </body>
 
 </html>

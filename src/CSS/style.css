@@ -1,0 +1,289 @@
+body {
+    font-size: 18px;
+    font-family: "Epilogue", sans-serif;
+}
+
+.layout {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 50px 1fr;
+    grid-template-areas:
+        "header"
+        "main"
+    ;
+}
+
+header {
+    position: relative;
+    grid-area: header;
+    width: 100%;
+    display: flex;
+    gap: 50px;
+    padding: 0 25px;
+}
+
+header .logo {
+    display: grid;
+    align-items: center;
+    align-items: end;
+}
+
+
+main {
+    grid-area: main;
+}
+
+nav ul {
+    list-style: none;
+}
+
+.menu {
+    display: flex;
+    gap: 25px;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: hsla(0, 0%, 8%, 0.686);
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.dropdown button:hover {
+    color: hsl(0, 0%, 0%);
+}
+
+.menu a {
+    text-decoration: none;
+    color: hsla(0, 0%, 8%, 0.686);
+    line-height: 1%;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.menu a:hover {
+    color: hsl(0, 0%, 0%);
+}
+
+.header-login {
+    position: absolute;
+    right: 0;
+}
+
+.header-login button {
+    border-radius: 10px;
+    padding: 15px 40px;
+    background: none;
+    cursor: pointer;
+    color: hsla(0, 0%, 8%, 0.686);
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.header-login button:nth-child(2) {
+    border: 2px solid hsla(0, 0%, 8%, 0.346);
+    transition: all 0.3s ease;
+}
+
+.header-login button:nth-child(2):hover {
+    border: 2px solid hsl(0, 0%, 8%);
+}
+
+.dropdown-menu {
+
+    position: relative;
+    display: grid;
+    gap: 10px;
+    line-height: 100%;
+    padding: 15px 20px;
+    box-shadow: 0 1px 100px rgba(0, 0, 0, 0.545);
+    background: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    font-size: 1rem;
+    color: hsla(0, 0%, 8%, 0.686);
+    margin-top: 20px;
+    font-size: 14px;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+
+.dropdown-menu.first.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+}
+
+.dropdown-menu.second.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+}
+
+.dropdown:nth-child(1) .dropdown-menu {
+    position: absolute;
+    flex-direction: column;
+    left: -65px;
+
+}
+
+.dropdown-menu img {
+    margin-right: 5px;
+}
+
+.dropdown-menu li {
+    cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+    color: hsl(0, 0%, 8%);
+}
+
+.container {
+    margin: 0 50px;
+}
+
+.card {
+    display: flex;
+    max-width: 1450px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.card .left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+    margin-top: 60px;
+}
+
+
+
+.title h1 {
+    font-size: 5.6rem;
+    line-height: 1;
+    margin: 24px 0;
+}
+
+
+
+.content {
+    max-width: 520px;
+    margin: 25px 0;
+    font-size: 1.3rem;
+    color: hsla(0, 0%, 8%, 0.657);
+    line-height: 1.6;
+}
+
+.card-btn {
+    width: 100%;
+}
+
+.card-btn button {
+    font-size: 1.3rem;
+    padding: 15px 25px;
+    border-radius: 10px;
+    background: hsl(0, 0%, 8%);
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.card-btn button:hover {
+    color: hsl(0, 0%, 8%);
+    background: hsl(0, 0%, 100%);
+    border: 1px solid, hsl(0, 0%, 8%);
+}
+
+.companias {
+    width: 100%;
+    display: flex;
+    gap: 15px;
+    align-items: end;
+    margin-top: 50px;
+}
+
+.card .right {
+    width: 50%;
+}
+
+.card .right picture {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.right img {
+    max-width: 520px;
+    width: 100%;
+
+}
+
+@media (max-width: 1024px) {
+    .card {
+        flex-direction: column-reverse;
+    }
+
+    .card .left {
+        width: 100%;
+        align-items: center;
+    }
+
+    .card .right {
+        width: 100%;
+    }
+
+    .right img {
+        margin-top: 20px;
+        max-width: 750px;
+        width: 100%;
+    }
+
+    .card .left .title {
+        width: 100%;
+        text-align: center;
+    }
+
+    .card .left h1 {
+        font-size: 2.5rem;
+    }
+
+    .card-btn {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .companias {
+        justify-content: center;
+        margin-bottom: 20px;
+        gap: 50px;
+    }
+}
+
+@media (max-width: 430px) {
+    
+    .card .left h1 {
+        font-size: 3rem;
+    }
+
+    .card .left .content {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .card-btn button {
+        font-size: 1.5rem;
+    }
+}

@@ -4,9 +4,16 @@ const btnDropdownFeatures = document.querySelector(".dropdown-btn-features");
 const btnDropdownCompany = document.querySelector(".dropdown-btn-company");
 const menuFeatures = document.querySelector(".dropdown-menu.first");
 const menuCompany = document.querySelector(".dropdown-menu.second");
+const burger = document.querySelector(".burger");
+const navigation = document.querySelector(".navigation");
+
+burger.addEventListener("click", (e)=>{
+    e.stopPropagation();
+    navigation.classList.toggle("active");
+})
 
 btnDropdownFeatures.addEventListener("click", (e)=>{
-    e.stopPropagation()
+    e.stopPropagation();
     menuFeatures.classList.toggle("active");
 })
 

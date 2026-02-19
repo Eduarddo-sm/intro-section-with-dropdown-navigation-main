@@ -44,6 +44,15 @@ nav ul {
     list-style: none;
 }
 
+.nav-close {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    width: fit-content;
+}
+
 .menu {
     display: flex;
     gap: 25px;
@@ -124,10 +133,23 @@ nav ul {
     transition: all 0.3s ease;
 }
 
+.arrow {
+    transform: rotate(0px);
+    transition: transform 0.5s ease;
+}
+
 .dropdown-menu.first.active {
     opacity: 1;
     visibility: visible;
     transform: translateY(0px);
+}
+
+.arrow.one.active {
+    transform: rotate(180deg);
+}
+
+.arrow.two.active {
+    transform: rotate(180deg);
 }
 
 .dropdown-menu.second.active {
@@ -263,11 +285,13 @@ nav ul {
         position: fixed;
         background: hsl(0, 0%, 98%);
         justify-content: space-between;
+        z-index: 3;
     }
 
     .burger {
         display: block;
     }
+
 
     .navigation {
         position: fixed;
@@ -276,7 +300,7 @@ nav ul {
         justify-content: unset;
         padding: 1rem 0;
         opacity: 0;
-        top: 60px;
+        top: 0;
         right: 0;
         bottom: 0;
         max-width: 0;
@@ -285,7 +309,14 @@ nav ul {
             max-width 0.1s ease,
             opacity 0.2s ease,
             padding 0.4s ease;
+        z-index: 2;
     }
+
+    .nav-close {
+        display: unset;
+    }
+
+
 
     .navigation.active {
         padding: 1rem;
@@ -294,6 +325,8 @@ nav ul {
         opacity: 1;
         z-index: 3;
     }
+
+
 
 
 
@@ -398,10 +431,10 @@ nav ul {
     }
 
     .companias {
-        gap: 9px;
+        gap: 5px
     }
 }
 
-section:not(#banner){
+section:not(#banner) {
     display: none;
 }

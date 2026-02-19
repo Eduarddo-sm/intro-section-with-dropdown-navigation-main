@@ -6,24 +6,36 @@ const menuFeatures = document.querySelector(".dropdown-menu.first");
 const menuCompany = document.querySelector(".dropdown-menu.second");
 const burger = document.querySelector(".burger");
 const navigation = document.querySelector(".navigation");
+const arrowOne = document.querySelector(".arrow.one");
+const arrowTwo = document.querySelector(".arrow.two");
+const navClose = document.querySelector(".nav-close");
+
+navClose.addEventListener("click", ()=>{
+    navigation.classList.remove("active");
+})
 
 burger.addEventListener("click", (e)=>{
     e.stopPropagation();
     navigation.classList.toggle("active");
+
 })
 
 btnDropdownFeatures.addEventListener("click", (e)=>{
     e.stopPropagation();
     menuFeatures.classList.toggle("active");
+    arrowOne.classList.toggle("active");
 })
 
 btnDropdownCompany.addEventListener("click", (e)=>{
     e.stopPropagation();
     menuCompany.classList.toggle("active");
+    arrowTwo.classList.toggle("active");
 })
 
 
 document.addEventListener("click", ()=>{
     menuFeatures.classList.remove("active");
     menuCompany.classList.remove("active");
+    arrowOne.classList.remove("active");
+    arrowTwo.classList.remove("active");
 })

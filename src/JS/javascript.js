@@ -9,14 +9,17 @@ const navigation = document.querySelector(".navigation");
 const arrowOne = document.querySelector(".arrow.one");
 const arrowTwo = document.querySelector(".arrow.two");
 const navClose = document.querySelector(".nav-close");
+const overlay = document.querySelector(".overlay");
 
 navClose.addEventListener("click", ()=>{
     navigation.classList.remove("active");
+        overlay.classList.remove("active");
 })
 
 burger.addEventListener("click", (e)=>{
     e.stopPropagation();
     navigation.classList.toggle("active");
+    overlay.classList.toggle("active");
 
 })
 
@@ -38,4 +41,5 @@ document.addEventListener("click", ()=>{
     menuCompany.classList.remove("active");
     arrowOne.classList.remove("active");
     arrowTwo.classList.remove("active");
+
 })

@@ -272,6 +272,10 @@ nav ul {
 
 }
 
+.overlay {
+    display: none;
+}
+
 
 
 @media (max-width: 1024px) {
@@ -291,7 +295,6 @@ nav ul {
     .burger {
         display: block;
     }
-
 
     .navigation {
         position: fixed;
@@ -326,9 +329,17 @@ nav ul {
         z-index: 3;
     }
 
-
-
-
+        .overlay.active {
+        display: block;
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.219);
+        z-index: -1;
+    }
 
     .dropdown-menu {
         position: static;
